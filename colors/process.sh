@@ -17,6 +17,9 @@ f4=${col_arr[$2]}
 cut -d, -f1-2 --complement $1 > $f1
 sort -u $f1 > $f2
 
+#Any one of grep or awk can be used, while keeping the other one commented
+#grep is set to be used currently, but awk can be used as well if you prefer
+
 grep -P "^([\d]+,){2}$2" $f2 > $f3
 #awk -v var=$2 -F, '$3 == var' $f2 > $f3
 
