@@ -10,6 +10,6 @@ For a particular color, the scripts plot the points where it was placed (irrespe
   
     `chmod +x process.sh`
     
-    `./process.sh <main_csv_file> <color_code>`
+    `./process.sh <main_csv_file> <color_number>`
     
     It should be noted that any one of `grep` or `awk` can be used within the script, but using `grep` is slightly faster.
