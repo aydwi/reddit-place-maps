@@ -4,9 +4,8 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv("processed.csv")
 
-#print(np.count_nonzero(~np.isnan(df['value'])))
-
-df['value'].fillna(1, inplace = True)
+#Comment the next line to show points with 0 placements
+#df['value'].fillna(1, inplace = True)
 
 k = df['value']
 
@@ -28,7 +27,7 @@ for x, y, value in l:
 
 m = m.transpose()
 
-print("This matrix has normalized values of all 1000000 pixels-\n\n")
+print("The matrix with normalized values of all 1000000 points-\n\n")
 print(m)
 
 plt.imshow(m, cmap='hot')
