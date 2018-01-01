@@ -4,25 +4,22 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv("processed.csv")
 
+#print(np.count_nonzero(~np.isnan(df['value'])))
+
+df['value'].fillna(1, inplace = True)
+
 k = df['value']
-l=[]
 
 k = np.power(np.log10(k),2)
 max= k.max()
 k = k/max
 
 df['value'] = k
-#df.loc[df.value == 0.00000, 'value'] = np.inf
 
-df.to_csv('norm.csv', index=False)
-l = list(df.itertuples(index=False))
+#df.to_csv('norm.csv', index=False)
+#data = np.genfromtxt('norm.csv', dtype = float, delimiter=',', names=True)
 
-
-data = np.genfromtxt('norm.csv', dtype = float, delimiter=',', names=True)
-
-print(data)
-
-l=list(df.itertuples(index=False, name = None))
+l = list(df.itertuples(index = False, name = None))
 
 m = np.zeros((1000, 1000))
 
@@ -31,7 +28,7 @@ for x, y, value in l:
 
 m = m.transpose()
 
-print("This matrix has normalized values of all 1000000 pixels\n\n")
+print("This matrix has normalized values of all 1000000 pixels-\n\n")
 print(m)
 
 plt.imshow(m, cmap='hot')
@@ -39,5 +36,5 @@ plt.imshow(m, cmap='hot')
 for spine in plt.gca().spines.values():
     spine.set_visible(False)
 
-plt.savefig('myimage.png', format='png', dpi=1000)
+plt.savefig('myimage.png', format='png', dpi=1200)
 plt.show()

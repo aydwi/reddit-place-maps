@@ -20,9 +20,9 @@ echo "Step 1 finished"
 python3 addcount.py
 echo "Step 2 finished"
 
-#Handling coordinates with 0 placements
+#Following 4 steps handle coordinates with 0 placements
 
-#Part1 - Generate a file with all the coordinates
+#Step1 - Generate a file with all the coordinates
 python3 milpair.py
 echo "Step 3.1 finished"
 
@@ -34,12 +34,9 @@ echo "Step 3.2 finished"
 grep -F -x -v -f $f3 $f2 > $f5
 echo "Step 3.3 finished"
 
-#Step4 - Add a column of '1' to such points
-
-#'1' is added as the count value, bacause at later steps, a logarithmic (base 10)
-#function is used to normalize the count, and these values get converted to 0
-
-python3 addone.py
+#Step4 - Add a column of NaN as count value, so that a graph can be plotted which
+#can distinctly show these points if desired
+python3 addnan.py
 echo "Step 3.4 finished"
 
 #Merge the 2 files containing coordinates with placements and without placements
@@ -50,7 +47,7 @@ echo "Step 4 finished"
 sort --field-separator=',' -n -k 1,1 -k 2,2 $f7 > $f8
 echo "Step 5 finished"
 
-#Add a header field (required for later processing)
+#Add a header field (required by plot.py)
 sed -i 1i"x,y,value" $f8
 echo "Step 6 finished"
 
