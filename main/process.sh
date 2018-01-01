@@ -55,33 +55,7 @@ sed -i 1i"x,y,value" $f8
 echo "Step 6 finished"
 
 #Removing intermediate files
-if [ -f $f1 ] ; then
-    rm $f1
-fi
-
-if [ -f $f2 ] ; then
-    rm $f2
-fi
-
-if [ -f $f3 ] ; then
-    rm $f3
-fi
-
-if [ -f $f4 ] ; then
-    rm $f4
-fi
-
-if [ -f $f5 ] ; then
-    rm $f5
-fi
-
-if [ -f $f6 ] ; then
-    rm $f6
-fi
-
-if [ -f $f7 ] ; then
-    rm $f7
-fi
+rm tmpfile{1,2,3,4,5,6,7}.csv
 
 #File is ready to be passed to Python script for plotting
 echo
