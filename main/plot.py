@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 df = pd.read_csv("processed.csv")
 
 #Comment the next line to show points with 0 placements
-#df['value'].fillna(1, inplace = True)
+df['value'].fillna(1, inplace = True)
 
 k = df['value']
 
@@ -35,5 +35,5 @@ plt.imshow(m, cmap='hot')
 for spine in plt.gca().spines.values():
     spine.set_visible(False)
 
-plt.savefig('myimage.png', format='png', dpi=1200)
+plt.savefig('heatmap.png', format='png', dpi=1200)
 plt.show()
