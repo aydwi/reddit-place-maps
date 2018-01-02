@@ -6,7 +6,7 @@ This folder contains scripts and data to plot the heatmap of full 1000 x 1000 Pl
 
 The file `main_file.csv` contains a lot of data. Not all of it is required to plot the map, and therefore it is processed to produce a file `processed.csv`, which contains the coordinates and their no. of placements in the form of `x,y,count`.
 
-The shell script `process.sh` can be run to perform all the processing and generate the required file. It accepts one parameter, `main_file.csv`. Note that it requires UNIX tools like `cut`, `grep`, `sed` and `awk` to be present. 
+The shell script `process.sh` can be run to perform all the processing and generate the required file. It accepts one parameter, `main_file.csv`. Note that UNIX tools like `cut`, `grep`, `sed` and `awk` must be present. 
 
 #### Running process.sh
 
@@ -18,7 +18,7 @@ The shell script `process.sh` can be run to perform all the processing and gener
 
 Now that we have processed data to work with, the Python script `plot.py` can be used to plot the data. It can generate maps with or without the points with *zero* placements.
 
-Note that the Python pacakges `numpy`, `pandas` and `matplotlib` should be present.
+Note that the Python pacakges `numpy`, `pandas` and `matplotlib` must be present.
 
     python3 plot.py
     
