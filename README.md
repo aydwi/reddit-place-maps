@@ -4,7 +4,8 @@
 
 Visualizing data from the 2017 Reddit event - [Place](https://www.reddit.com/r/place/)
 
-## Obtaining and refining the dataset
+
+### Obtaining and refining the dataset
 
 Place datasets were publicly released [here](https://redd.it/6640ru). The **full dataset** contains the details of all the tile placements throughout the event, and can be downloaded (as a gzipped CSV) [here](https://storage.googleapis.com/place_events/tile_placements.csv.gz).
 
@@ -16,4 +17,4 @@ On a UNIX-like system, you can just
 
     awk -F, '$3<1000 && $4<1000' tile_placements.csv > main_file.csv
     
-Here, `tile_placements.csv` is the name of the original **full dataset** file.
+Here, `tile_placements.csv` is the name of the original full dataset file.
