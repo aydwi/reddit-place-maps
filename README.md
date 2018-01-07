@@ -18,13 +18,3 @@ On a UNIX-like system, you can just
     awk -F, '$3<1000 && $4<1000' tile_placements.csv > main_file.csv
     
 Here, `tile_placements.csv` is the name of the original full dataset file.
-
-### FAQs
-
-**Why introduce a platform-specific dependency? Why not do it in Python alone?**
-
-The original dataset is large. Instead of loading it as a dataframe, using UNIX tools to manipulate the file according to my requirements was quicker and easier for me.
-
-**Can I contribute?**
-
-Absolutely. You are more than welcome to contribute to the project. 
