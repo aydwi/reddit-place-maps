@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv("processed.csv")
 
-#Comment the next line to show points with 0 placements
+#Un-comment the next line to hide points with 0 placements
 #df['value'].fillna(1, inplace = True)
 
 k = df['value']
