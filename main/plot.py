@@ -11,7 +11,6 @@ k = df['value']
 
 k = np.power(np.log10(k),2)
 max= k.max()
-k = k/max
 
 df['value'] = k
 
@@ -27,13 +26,10 @@ for x, y, value in l:
 
 m = m.transpose()
 
-print("The matrix with normalized values of all 1000000 points-\n\n")
-print(m)
-
 plt.imshow(m, cmap='hot')
 
 for spine in plt.gca().spines.values():
-    spine.set_visible(False)
+    spine.set_linewidth(0.05)
 
 plt.savefig('heatmap.png', format='png', dpi=1200)
 plt.show()
