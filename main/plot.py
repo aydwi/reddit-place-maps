@@ -14,9 +14,6 @@ max= k.max()
 
 df['value'] = k
 
-#df.to_csv('norm.csv', index=False)
-#data = np.genfromtxt('norm.csv', dtype = float, delimiter=',', names=True)
-
 l = list(df.itertuples(index = False, name = None))
 
 m = np.zeros((1000, 1000))
