@@ -13,8 +13,8 @@ The Place canvas was a 1000x1000 grid, but the **full dataset** contains coordin
 
 #### Generating `main_file.csv` from full dataset
 
-On a UNIX-like system, you can just
+On a UNIX-like system, you can run:
 
     awk -F, '$3<1000 && $4<1000' tile_placements.csv > main_file.csv
     
-Here, `tile_placements.csv` is the name of the original full dataset file.
+Here, `tile_placements.csv` is the name of the original (full dataset) file.
