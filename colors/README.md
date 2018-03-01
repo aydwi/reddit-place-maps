@@ -4,12 +4,10 @@
 
 For a particular color, the scripts plot the points where it was placed (irrespective of number of times it was placed there). Since there are a lot of points, plotting them as **Hexbins** or a **2D-Histogram** seems more appropriate. The input is a CSV file containing a unique list of the specified color's coordinates as `x,y`.
 
-### Usage-
+### Processing the data-
 
-  * The shell script `process.sh` can be run to generate the required CSV. It takes two arguments, and can be run as follows-
+  * The bash script `process.sh` can be run to generate the required CSV. It accepts two arguments, and can be run as follows-
   
     `chmod +x process.sh`
     
-    `./process.sh <main_csv_file> <color_number>`
-    
-    It should be noted that any one of `grep` or `awk` can be used within the script, but using `grep` is slightly faster.
+    `./process.sh <path/to/main_file.csv> <color_number>`
